@@ -102,7 +102,7 @@ while (cards.length < 30) {
   }
 }
 
-penalties = play(cards);
+const penalties = play(cards);
 console.log(`Player A's penalty: ${penalties[0]}`);
 console.log(`Player B's penalty: ${penalties[1]}`);
 console.log(`Player C's penalty: ${penalties[2]}`);
