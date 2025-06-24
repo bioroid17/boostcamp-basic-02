@@ -87,9 +87,8 @@ function play(cards) {
   }
 
   console.log("Game Set!");
-  console.log("Player A's penalty: " + players[0].penalty);
-  console.log("Player B's penalty: " + players[1].penalty);
-  console.log("Player C's penalty: " + players[2].penalty);
+
+  return [players[0].penalty, players[1].penalty, players[2].penalty];
 }
 
 let cards = [];
@@ -103,4 +102,7 @@ while (cards.length < 30) {
   }
 }
 
-play(cards);
+penalties = play(cards);
+console.log(`Player A's penalty: ${penalties[0]}`);
+console.log(`Player B's penalty: ${penalties[1]}`);
+console.log(`Player C's penalty: ${penalties[2]}`);
