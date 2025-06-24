@@ -88,7 +88,11 @@ function play(cards) {
 
   console.log("Game Set!");
 
-  return [players[0].penalty, players[1].penalty, players[2].penalty];
+  return new Map([
+    ["A", players[0].penalty],
+    ["B", players[1].penalty],
+    ["C", players[2].penalty],
+  ]);
 }
 
 let cards = [];
@@ -103,6 +107,6 @@ while (cards.length < 30) {
 }
 
 const penalties = play(cards);
-console.log(`Player A's penalty: ${penalties[0]}`);
-console.log(`Player B's penalty: ${penalties[1]}`);
-console.log(`Player C's penalty: ${penalties[2]}`);
+console.log(`Player A's penalty: ${penalties.get("A")}`);
+console.log(`Player B's penalty: ${penalties.get("B")}`);
+console.log(`Player C's penalty: ${penalties.get("C")}`);
